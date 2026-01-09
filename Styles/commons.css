@@ -2,7 +2,8 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
+#overlay1{animation: animacja 2s}
+@keyframes animacja{from {background-color: black;} to {background-color: white;}}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -30,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background-color: #265e26;;
 }
 ol, ul {
 	list-style: none;
@@ -47,6 +49,7 @@ table {
 	border-spacing: 0;
 }
 /*MEYER*/
+*{box-sizing: border-box; margin: 0 auto; padding: 0 0; text-align: center;}
 h1{
     font-size: 67.2137px;
     color: red;
@@ -54,6 +57,99 @@ h1{
 }
 nav {
     width: 100vw;
-    height: 3cm;
-    background-color: #4dc24d;
+    height: 2cm;
+    background: linear-gradient(0deg,#4dc24d, #265e26);
+	position: fixed;
+	z-index: 0;
+}
+
+main{
+	padding-top: 2cm;
+	background-color: rgb(231, 231, 231);
+	width: 100vw;
+	height: 100vh;
+}
+
+#kolumny {
+	display: flex;
+}
+#pudelko{
+	background-color: red;
+}
+
+#kolumnasrodkowa{
+	background-color: pink;
+	width: 100%;
+}
+ul{list-style-type: none;}
+.menupoziome{display: flex;}
+.menupoziome a:hover{background: radial-gradient(red, white, blue);}
+.menupoziome a:visited{background: radial-gradient(blue, black, pink);}
+li{border-radius: 5px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#overlay1, #overlay2, #overlay3 {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	pointer-events: none;
+}
+#overlay1 {
+	background-color: #c9ffc9;
+}
+#overlay2 {
+	background-color: #3f943f;
+}
+#overlay3 {
+	background-color: #265e26;
+}
+
+#overlay1.expand{
+	animation: expand 0.16s forwards;
+	pointer-events: all;
+}
+#overlay2.expand{
+	animation: expand 0.32s forwards;
+	pointer-events: all;
+}
+#overlay3.expand {
+	animation: expand 0.5s forwards;
+	pointer-events: all;
+}
+@keyframes expand {
+	from {height: 0; bottom: 0;}
+	to {height: 100%; bottom: 0;}
+}
+
+#overlay1.retract{
+	animation: retract 1s forwards;
+	pointer-events: all;
+}
+#overlay2.retract{
+	animation: retract 0.66s forwards;
+	pointer-events: all;
+}
+#overlay3.retract {
+	animation: retract 0.33s forwards;
+	pointer-events: all;
+}
+
+@keyframes retract {
+	from {height: 100%; top: 0;}
+	to {height: 0; top: 0;}
 }
