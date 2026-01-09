@@ -2,8 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-#overlay1{animation: animacja 2s}
-@keyframes animacja{from {background-color: black;} to {background-color: white;}}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -33,9 +31,6 @@ body {
 	line-height: 1;
 	background-color: #265e26;;
 }
-ol, ul {
-	list-style: none;
-}
 blockquote, q {
 	quotes: none;
 }
@@ -55,12 +50,48 @@ h1{
     color: red;
     background-color: green;
 }
+
 nav {
     width: 100vw;
     height: 2cm;
     background: linear-gradient(0deg,#4dc24d, #265e26);
-	position: fixed;
-	z-index: 0;
+    position: fixed;
+    z-index: 0;
+
+    /* Flexbox for alignment */
+    display: flex;
+    align-items: center; 
+    padding-left: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 1cm;
+	margin-top: 0.5cm;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #3f943f;
+
+    padding: 5px;
+    border-radius: 2px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li a:hover {
+    background-color: #265e26;
 }
 
 main{
@@ -68,6 +99,8 @@ main{
 	background-color: rgb(231, 231, 231);
 	width: 100vw;
 	height: 100vh;
+	display: flex;
+	justify-content: center;
 }
 
 #kolumny {
@@ -81,11 +114,6 @@ main{
 	background-color: pink;
 	width: 100%;
 }
-ul{list-style-type: none;}
-.menupoziome{display: flex;}
-.menupoziome a:hover{background: radial-gradient(red, white, blue);}
-.menupoziome a:visited{background: radial-gradient(blue, black, pink);}
-li{border-radius: 5px;}
 
 
 
