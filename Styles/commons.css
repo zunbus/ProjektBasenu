@@ -160,8 +160,8 @@ main{
 	pointer-events: all;
 }
 @keyframes expand {
-	from {height: 0; bottom: 0;}
-	to {height: 100%; bottom: 0;}
+	from {height: 0; top: 0;}
+	to {height: 100%; top: 0;}
 }
 
 #overlay1.retract{
@@ -178,6 +178,6 @@ main{
 }
 
 @keyframes retract {
-	from {height: 100%; top: 0;}
-	to {height: 0; top: 0;}
+	from {height: 100%; bottom: 0;}
+	to {height: 0; bottom: 0;}
 }
