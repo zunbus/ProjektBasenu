@@ -32,7 +32,6 @@
     </head>
     <body>
         <script src="https://cdn.jsdelivr.net/npm/@google/model-viewer@4.1.0/dist/model-viewer.min.js" type="module"></script>
-        <div id="pudelko">
         <nav>
             <ul>   
                 <li style="margin-top: 0;"><a href="#" onclick="closePage('../index.html')"><img style="width: 50px; height: 50px;" src="../img/Logo.png" alt="logo"></a></li>
@@ -44,25 +43,27 @@
                 <li><a href="#" onclick="closePage('cite/Model-Viewer.html')">Wizualizacja 3d</a></li>
            </ul>
         </nav>
-        <main>
-            <h1>Wizualizacja 3d</h1>
-            <p>Tutaj możesz zobaczyć prosty model 3d przedstawiający jak mógłby wyglądać basen.</p>
-            <div>
-                <model-viewer
-                src="../assets/Building.glb"
-                camera-controls
-                min-camera-orbit="auto 0m 0m"
-                max-camera-orbit="auto 10m 10m"
-                min-field-of-view="10deg"
-                max-field-of-view="75deg"
-                touch-action="pan-y"
-                id="viewer">
-                </model-viewer>
-                <button onclick="Changemodel(0)">Budynek</button>
-                <button onclick="Changemodel(1)">Parter</button>
-                <button onclick="Changemodel(2)">Piwnica</button>
-            </div>
-        </main>
+        <div id="center">
+            <main>
+                <h1>Wizualizacja 3d</h1>
+                <p>Tutaj możesz zobaczyć prosty model 3d przedstawiający jak mógłby wyglądać basen.</p>
+                <div>
+                    <model-viewer
+                    src="../assets/Building.glb"
+                    camera-controls
+                    min-camera-orbit="auto 0m 0m"
+                    max-camera-orbit="auto 10m 10m"
+                    min-field-of-view="10deg"
+                    max-field-of-view="75deg"
+                    touch-action="pan-y"
+                    id="viewer">
+                    </model-viewer>
+                    <button onclick="Changemodel(0)">Budynek</button>
+                    <button onclick="Changemodel(1)">Parter</button>
+                    <button onclick="Changemodel(2)">Piwnica</button>
+                </div>
+            </main>
+        </div>
         <footer>
         </footer>
 

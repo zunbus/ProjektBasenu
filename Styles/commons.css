@@ -99,15 +99,14 @@ main{
 	background-color: rgb(231, 231, 231);
 	width: 100vw;
 	height: 100vh;
-	display: flex;
-	justify-content: center;
 }
 
 #kolumny {
 	display: flex;
 }
-#pudelko{
-	background-color: red;
+#center{
+	display: flex;
+	justify-content: center;
 }
 
 #kolumnasrodkowa{
