@@ -10,15 +10,19 @@
 </head>
 <body>
 
+<script src="https://cdn.jsdelivr.net/npm/@google/model-viewer@4.1.0/dist/model-viewer.min.js" type="module"></script>
+
 <model-viewer
-  alt="Building"
-  src="../assets/Building.glb"
-  shadow-intensity="1"
+  src="Building.glb"
   camera-controls
+  min-camera-orbit="auto 0m 0m"
+  max-camera-orbit="auto 10m 10m"
+  min-field-of-view="10deg"
+  max-field-of-view="75deg"
   touch-action="pan-y">
 </model-viewer>
 
-<script src="https://cdn.jsdelivr.net/npm/@google/model-viewer@4.1.0/dist/model-viewer.min.js"></script>
+
 
 </body>
 </html>
