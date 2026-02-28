@@ -28,9 +28,9 @@
 
 <script>
     const models = ["../assets/Building.glb", "../assets/Floor1.glb", "../assets/Basement.glb"];
+    const viewer = document.getElementById("viewer");
     function Changemodel(id){
-        viewer = document.getElementById("viewer");
-        viewer.setAttribute("src", models[id]);
+        viewer.src = models[id];
     }
 </script>
 </body>
