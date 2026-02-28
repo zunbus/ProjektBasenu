@@ -45,6 +45,9 @@ table {
 }
 *{box-sizing: border-box; margin: 0 auto; padding: 0 0; text-align: center;}
 
+
+
+
 nav {
     width: 100vw;
     height: 2cm;
@@ -119,6 +122,8 @@ footer {
 	width: 100vw;
 	color: white;
 	background-color: green;
+	position: fixed;
+	bottom: 0;
 }
 
 
