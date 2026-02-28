@@ -43,13 +43,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/*MEYER*/
 *{box-sizing: border-box; margin: 0 auto; padding: 0 0; text-align: center;}
-h1{
-    font-size: 67.2137px;
-    color: red;
-    background-color: green;
-}
 
 nav {
     width: 100vw;
@@ -58,7 +52,6 @@ nav {
     position: fixed;
     z-index: 0;
 
-    /* Flexbox for alignment */
     display: flex;
     align-items: center; 
     padding-left: 0;
@@ -112,9 +105,20 @@ main{
 	width: 100%;
 }
 
+h1 {
+	margin: 1cm;
+}
 
+p {
+	margin: 0.1cm;
+}
 
-
+footer {
+	padding: 1cm;
+	width: 100vw;
+	color: white;
+	background-color: green;
+}
 
 
 
