@@ -19,10 +19,19 @@
   max-camera-orbit="auto 10m 10m"
   min-field-of-view="10deg"
   max-field-of-view="75deg"
-  touch-action="pan-y">
+  touch-action="pan-y"
+  id="viewer">
 </model-viewer>
+<button onclick="Changemodel(0)">Budynek</button>
+<button onclick="Changemodel(1)">Parter</button>
+<button onclick="Changemodel(2)">Podziemie</button>
 
-
-
+<script>
+    const models = ["../assets/Building.glb", "../assets/Floor1.glb", "../assets/Basement.glb"];
+    function Changemodel(id){
+        viewer = document.getElementById("viewer");
+        viewer.setAttribute("src", models[id]);
+    }
+</script>
 </body>
 </html>
