@@ -18,7 +18,7 @@ To repozytorium zawiera projekt grupowy mający na zadaniu opisać i przedstawi�
 
 3. Licencja
 
-CC0
+CC0 - Creative Commons 0
 
 4. Autorzy
 
