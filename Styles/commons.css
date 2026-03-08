@@ -90,13 +90,25 @@ nav ul li a:hover {
     background-color: #265e26;
 }
 
-main{
-	padding-top: 2cm;
-	background-color: rgb(231, 231, 231);
-	width: 100vw;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
+.table-lefft {
+	background-color: #3f943f;
+}
+
+main {
+    width: 100vw;
+    height: fit-content;
+    padding-top: 2cm;
+    padding-bottom: 3cm;
+    background-color: rgb(231, 231, 231);
+	min-height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#center {
+	align-items: center;
 }
 
 #kolumny {
@@ -106,11 +118,6 @@ main{
 #kolumnasrodkowa{
 	background-color: pink;
 	width: 100%;
-}
-
-h1 {
-	margin: 1cm;
-	font-size: 25pt;
 }
 
 p {
@@ -126,8 +133,44 @@ footer {
 	bottom: 0;
 }
 
+h1 {
+	margin: 1cm;
+	font-size: 25pt;
+	font-weight: bolder;
+}
 
+h2 {
+	margin: 0.5cm;
+	font-size: 15pt;
+	font-weight: bold;
+}
+h3 {
+	margin: 0.25cm;
+	font-size: 12.5pt;
+	font-weight: bold;
+}
 
+table {
+    border-collapse: separate;
+    border-spacing: 0.2cm;
+	margin: 0 auto;
+}
+
+th, td {
+    padding: 0.5cm;
+    color: white;
+    border-radius: 5%;
+}
+td {
+	background-color: #4dc24d;
+}
+th {
+	background-color: #265e26;
+}
+ul, ol {
+    width: fit-content;
+    margin: 0 auto;
+}
 
 
 
