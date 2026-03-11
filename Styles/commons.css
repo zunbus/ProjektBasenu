@@ -94,11 +94,14 @@ nav ul li a:hover {
 	background-color: #3f943f;
 }
 
+img {
+	border-radius: 5%;
+}
+
 main {
     width: 100vw;
     height: fit-content;
-    padding-top: 2cm;
-    padding-bottom: 3cm;
+	padding: 2cm 20% 3cm;
     background-color: rgb(231, 231, 231);
 	min-height: 100vh;
     
