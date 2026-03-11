@@ -10,9 +10,86 @@
         <title>Projekt Basenu Szkolnego</title>
         <link rel="icon" href="../img/Logo-Dark.png">
         <link rel="stylesheet" href="../Styles/commons.css">
-    </head>
-    <body>
-        <nav>
+<style>
+body{
+  margin:0;
+  background:#111;
+  font-family:sans-serif;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(200px,1fr));
+  grid-auto-rows:200px;
+  grid-auto-flow:dense;
+  gap:10px;
+  padding:10px;
+}
+
+.tile{
+  position:relative;
+  overflow:hidden;
+  cursor:pointer;
+}
+
+.tile img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .3s ease;
+}
+
+.tile:hover img{
+  transform:scale(1.08);
+}
+
+.tile.wide{
+  grid-column:span 2;
+}
+
+.tile.tall{
+  grid-row:span 2;
+}
+
+
+.lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.9);
+  display:none;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  z-index:1000;
+}
+
+.lightbox img{
+  max-width:80%;
+  max-height:70vh;
+  border-radius:8px;
+}
+
+.lightbox p{
+  color:white;
+  margin-top:15px;
+  font-size:20px;
+}
+
+.close{
+  position:absolute;
+  top:20px;
+  right:40px;
+  color:white;
+  font-size:40px;
+  cursor:pointer;
+}
+p {
+    margin: 0.5cm;
+}
+</style>
+</head>
+<body>
+    <nav>
             <ul>   
                 <li style="margin-top: 0;"><a href="#" onclick="closePage('../index.html')"><img style="width: 50px; height: 50px;" src="../img/Logo.png" alt="logo"></a></li>
                 <li><a href="#" onclick="closePage('general.html')">Główne informacje</a></li>
@@ -25,6 +102,49 @@
         <main>
             <div id="center">
                 <h1>Wnętrze</h1>
+                <p>Wnętrze projektowanego basenu szkolnego zostało zaprojektowane z myślą o funkcjonalności, bezpieczeństwie oraz komforcie użytkowników. Obiekt obejmuje przestronną halę basenową, szatnie dla uczniów i personelu, prysznice, pomieszczenia dla ratowników oraz zaplecze techniczne odpowiedzialne za filtrację wody i wentylację. Całość uzupełniają korytarze techniczne, pomieszczenia magazynowe na sprzęt sportowy i odczynniki chemiczne oraz strefa wejściowa z lobby. Układ wnętrza zapewnia sprawną komunikację pomiędzy poszczególnymi strefami oraz odpowiednie warunki do prowadzenia zajęć sportowych i rekreacyjnych.</p>
+                <p>Poniżej znajduje się galeria z wyrenderowanymi wizualizacjami części wnętrza.</p>
+                <div class="gallery">
+                    <div class="tile wide" data-title="Pokój dla ratowników/nauczycieli">
+                        <img src="../img/Enchanced/Kantorek.png" />
+                    </div>
+
+                    <div class="tile" data-title="Air Handling Unit">
+                        <img src="../img/Enchanced/AHU.png" />
+                    </div>
+
+                    <div class="tile wide" data-title="Basen">
+                        <img src="../img/Enchanced/Basen.png" />
+                    </div>
+
+                    <div class="tile tall" data-title="Lobby">
+                        <img src="../img/Enchanced/Lobby.png" />
+                    </div>
+
+                    <div class="tile" data-title="Stacja wodna">
+                        <img src="../img/Enchanced/Filtracja.png" />
+                    </div>
+
+                    <div class="tile wide" data-title="Korytarz w piwnicy technicznej">
+                        <img src="../img/Enchanced/Korytarz.png" />
+                    </div>
+
+                    <div class="tile wide" data-title="Przebieralnia dla ratowników/nauczycieli">
+                        <img src="../img/Enchanced/Przebieralnia nauczycieli.png" />
+                    </div>
+
+                    <div class="tile wide" data-title="Szatnia męska">
+                        <img src="../img/Enchanced/Przebieralnia.png" />
+                    </div>
+
+                    <div class="tile wide" data-title="Prysznice damskie">
+                        <img src="../img/Enchanced/Shower.png" />
+                    </div>
+
+                    <div class="tile wide" data-title="Pokój na sprzęt basenowy i sportowy">
+                        <img src="../img/Enchanced/StorageRoom.png" />
+                    </div>
+                </div>
             </div>
         </main>
         <footer>
@@ -32,11 +152,47 @@
         </footer>
 
 
-        <!-- Dać na każdą stronę i podstrone -->
+
+<div class="lightbox" id="lightbox">
+  <span class="close">&times;</span>
+  <img id="lightbox-img">
+  <p id="lightbox-title"></p>
+</div>
+
+<script>
+const tiles = document.querySelectorAll(".tile");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const lightboxTitle = document.getElementById("lightbox-title");
+const closeBtn = document.querySelector(".close");
+
+tiles.forEach(tile => {
+  tile.addEventListener("click", () => {
+    const img = tile.querySelector("img").src;
+    const title = tile.dataset.title;
+
+    lightboxImg.src = img;
+    lightboxTitle.textContent = title;
+
+    lightbox.style.display = "flex";
+  });
+});
+
+closeBtn.addEventListener("click", () => {
+  lightbox.style.display = "none";
+});
+
+lightbox.addEventListener("click", (e) => {
+  if(e.target === lightbox){
+    lightbox.style.display = "none";
+  }
+});
+</script>
+<!-- Dać na każdą stronę i podstrone -->
         <div id="overlay1"></div>
         <div id="overlay2"></div>
         <div id="overlay3"></div>
         <script src="../scripts/common.js"></script>
         <!--                                 -->
-    </body>
+</body>
 </html>
