@@ -26,4 +26,4 @@ Hubert Filas - Projekt basenu i funkcjonalność JavaScript
 
 Adam Bartosz - Struktura strony oraz jej styl
 
-Eryk Kaputa - Pliki graficzne oraz wizualizacja
+Eryk Kaputa - Pliki graficzne oraz wizualizacja 3d
