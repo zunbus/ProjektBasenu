@@ -53,7 +53,7 @@ nav {
     height: 2cm;
     background: linear-gradient(0deg,#4dc24d, #265e26);
     position: fixed;
-    z-index: 0;
+    z-index: 1;
 
     display: flex;
     align-items: center; 
